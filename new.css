@@ -1,0 +1,168 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #988c8c;
+}
+
+/* Virtual Piano Heading */
+h1 {
+  font-family: 'Poppins', sans-serif; /* Elegant font style */
+  color: #444; /* Dark gray color */
+  font-size: 36px; /* Larger font size */
+  text-align: center; /* Centered text */
+  margin-top: 50px; /* Space from the top */
+  padding: 10px 0; /* Padding above and below the text */
+  text-transform: uppercase; /* Capitalize the text */
+  letter-spacing: 2px; /* Increase the space between letters */
+  font-weight: 600; /* Slightly bold text */
+  background: linear-gradient(90deg, black, #feb47b); /* Gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  color: transparent; /* Make the text transparent to show gradient */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+}
+
+h1:hover {
+  color: #fff; /* White color on hover */
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Glowing effect on hover */
+}
+
+/* Controls Section */
+.controls {
+  margin: 20px;
+  background-color: #988c8c;
+}
+
+.controls button,
+.controls select {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Dynamic Content */
+.dynamic-content {
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: none;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  background-color: #222; /* Background color to match the dark theme */
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Button Styling */
+.nav-button {
+  background: transparent;
+  border: none;
+  color: #bbb;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+/* Active Button Styling */
+.nav-button.active {
+  color: #ff9500; /* Orange color for active button */
+}
+
+/* Hover Effect */
+.nav-button:hover {
+  color: #fff; /* Change color on hover for a brighter look */
+}
+
+/* Adding a Line Under the Active Button */
+.nav-button.active::after {
+  content: '';
+  display: block;
+  margin: 4px auto 0;
+  width: 50%;
+  height: 2px;
+  background-color: #ff9500;
+}
+
+/* Piano Section */
+.piano {
+  display: flex;
+  justify-content: center;
+  margin-top: 0px;
+  position: relative;
+  border: 2px solid black;
+  padding: 5px;
+  background-color: #423d3d;
+  border-radius: 15px;
+}
+
+/* Piano Key Styling */
+.key {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 60px;
+  height: 200px;
+  margin: 2px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #6a6565;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.1s ease;
+}
+
+.key.white {
+  background-color: #fff;
+}
+
+.key.black {
+  width: 40px;
+  height: 130px;
+  margin-left: -20px;
+  margin-right: -20px;
+  background-color: #1f1e1e;
+  color: #fff;
+  z-index: 1;
+}
+
+/* Active Key Styling */
+.key:active,
+.key.pressed {
+  transform: translateY(4px);
+  background-color: #dcdcdc;
+}
+
+.key.black:active,
+.key.black.pressed {
+  background-color: #444;
+}
+
+/* Key Assist Highlight */
+.highlight {
+  animation: pulse 0.5s infinite alternate;
+  background-color: yellow !important;
+  color: black !important;
+}
+
+@keyframes pulse {
+  0% {
+      background-color: yellow;
+  }
+  100% {
+      background-color: lightyellow;
+  }
+}

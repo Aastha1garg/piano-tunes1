@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Piano</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+    <div>
+    <h1 >Virtual Piano</h1>
+    </div>
+    
+    <div class="controls">
+      <div>
+        <button onclick="goHome()">Home</button>
+        <select id="songSelect">
+            <option value="none">Choose a song</option>
+            <option value="song1">Song 1</option>
+            <option value="song2">Song 2</option>
+            <option value="song3">Song 3</option>
+        </select>
+        <div>
+          <button id="playBtn" disabled>Play</button>
+          <button id="pauseBtn" disabled>Pause</button>
+          <button id="stopBtn" disabled>Stop</button>
+      </div>
+        <button onclick="openTutorialPage()">Tutorials</button>
+        <button onclick="openAboutPage()">About</button>
+        <button onclick="openLoginPage()">Login/Register</button>
+    </div>    
+        <div class="nav-bar">
+            <button class="nav-button active">Record</button>
+            <button class="nav-button"  id="keyAssist">Key Assist</button>
+            <button class="nav-button" id="metronome">Metronome</button>
+            <button class="nav-button" id="sound">Sound</button>
+            <button class="nav-button" id="styles">Styles</button>
+            <button class="nav-button" id="save">Save</button>
+          </div>
+          <div id="dynamicContent" class="dynamic-content"></div>
+        <div class="piano">
+            <div class="key white" data-note="C" data-key="65">A</div>
+            <div class="key black" data-note="A" data-key="87"></div>
+            <div class="key white" data-note="D" data-key="83">S</div>
+            <div class="key black" data-note="B" data-key="69"></div>
+            <div class="key white" data-note="E" data-key="68">D</div>
+            <div class="key white" data-note="E" data-key="70">F</div>
+            <div class="key black" data-note="D" data-key="84"></div>
+            <div class="key white" data-note="C" data-key="71">G</div>
+            <div class="key black" data-note="E" data-key="89"></div>
+            <div class="key white" data-note="B" data-key="72">H</div>
+            <div class="key black" data-note="A" data-key="85"></div>
+            <div class="key white" data-note="B" data-key="74">J</div>
+            <div class="key white" data-note="C" data-key="65">A</div>
+            <div class="key black" data-note="C" data-key="87"></div>
+            <div class="key white" data-note="D" data-key="83">S</div>
+            <div class="key black" data-note="C" data-key="69"></div>
+            <div class="key white" data-note="E" data-key="68">D</div>
+            <div class="key white" data-note="E" data-key="70">F</div>
+            <div class="key black" data-note="A" data-key="84"></div>
+            <div class="key white" data-note="C" data-key="71">G</div>
+            <div class="key black" data-note="C" data-key="89"></div>
+            <div class="key white" data-note="B" data-key="72">H</div>
+            <div class="key black" data-note="E" data-key="85"></div>
+            <div class="key white" data-note="B" data-key="74">J</div>
+            <div class="key white" data-note="C" data-key="72">H</div>
+            <div class="key black" data-note="C" data-key="85"></div>
+            <div class="key white" data-note="B" data-key="74">J</div>
+            <div class="key white" data-note="C" data-key="65">A</div>
+            <div class="key black" data-note="A" data-key="87"></div>
+            <div class="key white" data-note="D" data-key="83">S</div>
+            <div class="key black" data-note="B" data-key="69"></div>
+            <div class="key white" data-note="E" data-key="68">D</div>
+            <div class="key white" data-note="E" data-key="70">F</div>
+            <div class="key black" data-note="D" data-key="84"></div>
+            <div class="key white" data-note="C" data-key="71">G</div>
+            <div class="key black" data-note="B" data-key="89"></div>
+            <div class="key white" data-note="B" data-key="72">H</div>
+            <div class="key black" data-note="A" data-key="85"></div>
+            <div class="key white" data-note="B" data-key="74">J</div>
+            
+           
+          </div>
+        <script src="/new.js"></script>
+    </div>
+</body>
+</html>
